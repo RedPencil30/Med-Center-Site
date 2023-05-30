@@ -7,6 +7,11 @@
 
 img{
     object-fit: cover;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .logo img{
@@ -80,6 +85,7 @@ li a{
 ul{
     display: flex;
     height: 100%;
+    white-space: nowrap;
 }
 
 li{
@@ -117,6 +123,7 @@ header .contentup{
     display: flex;
     justify-content: space-between;
     padding: 0 160px 0 160px;
+    height: auto;
 }
 
 .slider{
@@ -208,14 +215,29 @@ h2{
     justify-content: space-between;
 }
 
-.card, .card-img img{
+.card, .card-img{
     border-radius: 30px;
 }
 
-.card-img img{
+.card-img{
+    overflow: hidden;
     height: 300px;
-    width: 450px;
+    width: 100%;
 }
+
+.card-img img:hover{
+    height: 110%;
+    width: 110%;
+    transition: 1s;
+
+}
+
+.card-img img{
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+}
+
 
 .card{
     background-color: #ffffff;
@@ -242,15 +264,23 @@ h3{
     padding-top: 50px;
 }
 
+.card-button:hover{
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.5s;
+}
+
 .card-button{
     background-color: #8A4A44;
     font-size: 20px;
+    border: solid #8A4A44 2px;
     text-align: center;
     width: 250px;
     height: 50px;
     padding: 15px 70px 15px 70px;
     color: #ffffff;
     border-radius: 30px;
+    transition: 0.5s;
 }
 
 .all-but{
@@ -268,8 +298,14 @@ h3{
     margin: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 135px;
+    width: 0;
     height: 3px;
+    transition: 0.5s;
+}
+
+.all-but:hover > .hr{
+    width: 135px;
+    transition: 0.5s;
 }
 
 .adv-img img{
@@ -287,7 +323,7 @@ h3{
 
 .adv{
     height: auto;
-    width: 330px;
+    width: 100%;
 }
 
 .adv-text{
@@ -302,8 +338,14 @@ h3{
 }
 
 .specials .hr{
-    width: 220px;
+    width: 0;
 }
+
+.specials .all-but:hover > .hr{
+    width: 220px;
+    transition: 0.5s;
+}
+
 
 .reviews .card-p p, .reviews .card-h{
     text-align: left;
@@ -334,8 +376,14 @@ h3{
 }
 
 .reviews .hr{
-    width: 145px;
+    width: 0;
 }
+
+.reviews .all-but:hover > .hr{
+    width: 145px;
+    transition: 0.5s;
+}
+
 
 .news .card-h{
     text-align: left;
@@ -353,8 +401,14 @@ h3{
 }
 
 .news .hr{
-    width: 260px;
+    width: 0;
 }
+
+.news .all-but:hover > .hr{
+    width: 260px;
+    transition: 0.5s;
+}
+
 
 .adr1{
     margin-bottom: 50px;
@@ -362,6 +416,10 @@ h3{
 
 .adr-text, .adr-map{
     width: 50%;
+}
+
+.adr-map iframe{
+    height: 100%;
 }
 
 
@@ -423,14 +481,25 @@ footer .imgs{
         width: 400px;
         height: 100%;
     }
+    header a, header p, footer p, footer .right a, header .dropdown a{
+        font-size: 20px;
+    }
+    .card{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 
 @media(max-width: 1690px) {
-    .cards, .advantages .content, .adress .content{
-        flex-direction: column;
-        height: auto;
+    .adv{
+        margin-left: 10px;
+        margin-right: 10px;
     }
-    .card, .adv, .adr-text, .adr-map{
+    header a, header p, footer p, footer .right a, header .dropdown a{
+        font-size: 18px;
+    }
+
+    .adr-text, .adr-map{
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 50px;
@@ -438,15 +507,6 @@ footer .imgs{
     }
     .card img{
         width: 100%;
-    }
-    .card:last-child, .adv:last-child, .adr-map{
-        margin-bottom: 0;
-    }
-    .adv{
-        margin-bottom: 50px;
-    }
-    .adv-img img{
-        width: 300px;
     }
     .adr-map{
         width: 100%;
@@ -458,6 +518,7 @@ footer .imgs{
         padding-left: 40px;
         padding-right: 40px;
     }
+
 }
 
 @media(max-width: 1200px){
@@ -515,6 +576,9 @@ footer .imgs{
     }
     .card{
         width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
     }
     .card-button{
         padding-top: 30px;
@@ -522,6 +586,10 @@ footer .imgs{
         padding-left: 80px;
         padding-right: 80px;
         font-size: 25px;
+    }
+    .cards, .advantages .content{
+        flex-direction: column;
+        height: auto;
     }
 }
 
@@ -573,9 +641,6 @@ footer .imgs{
     }
     h1{
         font-size: 35px;
-    }
-    p, footer .right a, header a, .dropdown a{
-        font-size: 20px;
     }
 }
 
