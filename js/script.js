@@ -86,11 +86,10 @@ function pointColor(){
 setInterval(pointColor, 1);
 
 
-document.addEventListener('touchstart', handleTouchStart, false);
-document.addEventListener('touchmove', handleTouchMove, false);
-
-
 const logBlock = document.querySelector('.slider');
+
+logBlock.addEventListener('touchstart', handleTouchStart, false);
+logBlock.addEventListener('touchmove', handleTouchMove, false);
 
 let x1 = null;
 
