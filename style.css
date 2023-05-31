@@ -665,6 +665,9 @@ footer .imgs{
     p{
         font-size: 15px;
     }
+    .card h3{
+        font-size: 18px;
+    }
 }
 
 @media(max-width: 360px){
