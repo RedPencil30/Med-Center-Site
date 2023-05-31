@@ -328,6 +328,7 @@ h3{
 
 .adv-text{
     margin-top: 10px;
+
 }
 
 .card-p p{
@@ -422,14 +423,24 @@ h3{
     height: 100%;
 }
 
+.adr-text{
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
 
 .adress .content{
     display: flex;
     justify-content: space-between;
+    padding: 0;
 }
 
 .adress p{
     padding-bottom: 0;
+}
+
+.card-h, .card-p p{
+    text-align: left;
+    padding-left: 160px;
 }
 
 footer{
@@ -499,7 +510,7 @@ footer .imgs{
         font-size: 18px;
     }
 
-    .adr-text, .adr-map{
+    .adr-text{
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 50px;
@@ -510,6 +521,9 @@ footer .imgs{
     }
     .adr-map{
         width: 100%;
+    }
+    .card-h, .card-p p{
+    padding-left: 30px;
     }
 }
 
@@ -601,8 +615,11 @@ footer .imgs{
         width: 200px;
     }
     .content{
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .content p{
+        font-size: 18px;
     }
     .adv{
         width: 100%;
@@ -637,15 +654,21 @@ footer .imgs{
 
 @media(max-width: 470px){
     h2{
-        font-size: 30px;
+        font-size: 20px;
     }
     h1{
-        font-size: 35px;
+        font-size: 25px;
+    }
+    p{
+        font-size: 15px;
     }
 }
 
 @media(max-width: 360px){
+    h2{
+        font-size: 15px;
+    }
     h1{
-        font-size: 23px;
+        font-size: 20px;
     }
 }
