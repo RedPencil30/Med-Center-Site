@@ -640,7 +640,7 @@ footer .imgs{
     .left p{
         padding-right: 0;
     }
-    .card h3{
+    .card h3, .adress h3{
 
         font-size: 18px;
 
